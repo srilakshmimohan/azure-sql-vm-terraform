@@ -1,0 +1,46 @@
+-- To connect using below
+Az login
+
+az login --use-device-code
+
+az account show list
+
+Once terraform init is given it creates below files
+
+terraform.lock.hcl
+terraform.tfs.state.lock.info
+teeraform notes.txt
+terraform.tfstate
+
+terraform state list -- to show the list of resources which are deployed
+
+terraform state show azurerm_virtual_network.demo-vn-- this will give the information of each resources which have been deployed
+
+terraform show-- give the list of resources which are deployed
+
+terraform apply -destroy -- destory all the resources.
+
+Once the resources are deleted, all the details saved into terraform.tfstate.backup and terraform.tfstate will have the data modifies and the serial number also gets changed
+
+To generate ssh key use the below syntax
+ ssh-keygen -t rsa
+ when tried to copy the key inside a folder it throwed an error
+Error :Saving key "C:\\users\\srila/.ssh/demoazurekey" failed: No such file or directory
+
+To fix this i have to create directory first 
+mkdir -p C:\Users\srila\.ssh
+
+Then i passed the directory which i worked
+
+To find the list of keys , use below command
+ls ~/.ssh
+
+
+172.167.52.191
+
+
+ssh -i ~/.ssh/demoazurekey adminuser@172.167.52.191 
+
+lsb_release -a  -- used in Linux to display Linux Standard Base (LSB) information, which includes details about the distribution, release, and codename of the installed operating system.
+
+Create a template file with extension as .tpl
